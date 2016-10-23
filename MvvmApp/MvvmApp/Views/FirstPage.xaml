@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MvvmApp.ViewModels;assembly=MvvmApp"
+             x:Class="MvvmApp.Views.FirstPage">
+             
+   <ContentPage.BindingContext>
+    <viewModels:MainViewModel />
+  </ContentPage.BindingContext>
+
+  <StackLayout Spacing="20">
+    <Label Text="INavigationService"
+           FontSize="40"
+           TextColor="Green"/>
+    <Button Text="Navigate"
+            Command="{Binding NavigateCommand}"
+            TextColor="White"
+            BackgroundColor="Teal"
+            FontSize="40"/>
+    <Label Text="First Page"
+           FontSize="100" />
+  </StackLayout>
+
+</ContentPage>
